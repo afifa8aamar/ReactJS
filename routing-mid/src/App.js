@@ -7,7 +7,9 @@ import { Route, NavLink, Switch } from 'react-router-dom';
 class App extends React.Component  {
   state = {
     list: [],
-    tempItem: ""
+    tempItem: "",
+    
+
   }
 
   addToList = () => {
