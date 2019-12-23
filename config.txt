@@ -1,0 +1,10 @@
+host gitlab.com 
+HostName gitlab.com
+IdentityFile ~/.ssh/gitlab
+User afifa8aamar
+
+
+host github.com
+HostName github.com
+IdentityFile ~/.ssh/HomePractice
+User afifa8aamar
