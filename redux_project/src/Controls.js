@@ -6,10 +6,11 @@ const controls = (props) => {
   var check1 = false;
   var check2 = false;
   var check3 = false;
+
   return (
     <React.Fragment>
       <div>
-      <label>
+      <label style={{display:"flex"}}>
           <input className="check" onChange={() => {
             if(!check1)
               props.change(2.50);
@@ -20,7 +21,7 @@ const controls = (props) => {
           <span>Donut $2.50</span>
         </label>
 
-      <label>
+      <label style={{display:"flex"}}>
           <input onChange={() => {
           if(!check2)
             props.change(3);
@@ -32,7 +33,7 @@ const controls = (props) => {
           <span>Coffee $3.00</span>
         </label>
 
-        <label>
+        <label style={{display:"flex"}}>
           <input onChange={() =>{
             if(!check3)
               props.change(2);
@@ -40,11 +41,12 @@ const controls = (props) => {
               (props.change(-2))
             check3 = !check3;
           }} type="checkbox"/>
-          <img src="../assets/burger.jpg"></img>
           <span>Burger $1.98</span>
         </label>
       </div>
-      <button onClick={()=> console.log(props)}>ყიდვა</button>
+      <button onClick={()=> {
+        
+      }}>ყიდვა</button>
       
     </React.Fragment>
   )
