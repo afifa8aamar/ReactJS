@@ -4,10 +4,7 @@ const initialState = {
 
 const counterReducer = (state = initialState, actions) => {
   switch(actions.type){
-    case "CHANGE":
-      return {
-        counter: state.counter + actions.val
-      }
+    case "CHANGE": return {counter: state.counter + actions.val }
     default:
       return state;
   }

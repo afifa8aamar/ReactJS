@@ -8,6 +8,7 @@ import {Provider} from 'react-redux';
 import CounterReducer from './store/reducers/counter';
 import HistoryReducer from './store/reducers/history';
 import thunk from 'redux-thunk';
+import {BrowserRouter} from 'react-router-dom';
 
 const reducers = combineReducers({
   counterReducer: CounterReducer,
@@ -31,7 +32,7 @@ const loggerMiddleware = (store) => {
 const reduxStore = 
   createStore(reducers, composeEnhancers(applyMiddleware(loggerMiddleware, thunk)));
 
-ReactDOM.render(<Provider store={reduxStore}><App /></Provider>, document.getElementById('root'));
+ReactDOM.render(<BrowserRouter><Provider store={reduxStore}><App /></Provider></BrowserRouter>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
